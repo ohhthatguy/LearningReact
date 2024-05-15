@@ -1,0 +1,29 @@
+.AnimeCardContainer{
+/* height: 10rem; */
+border: 1px solid black;
+display: flex;
+overflow-x: scroll;
+gap: 2rem;
+/* padding: 1.2rem; */
+}
+
+.AnimeCard{
+    border: 1px solid red;
+    font-family: fantasy;
+    display: grid;
+    
+}
+
+.AnimeByGenreImg{
+    
+}
+
+.AnimeByGenreTitle{
+    /* text-align: right; */
+    
+
+}
+
+.RejectedAnimeCard{
+    display: none;
+}

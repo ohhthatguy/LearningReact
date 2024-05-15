@@ -1,0 +1,88 @@
+.CardAfterClickContainer{
+    border: 5px solid red;
+    display: grid;
+    place-items: center;
+    row-gap: 2rem;
+}
+
+.AnimeImgContainer{
+    display: grid;
+    place-items: center;
+    position: relative;
+
+  
+}
+
+.AnimeImgBackGround{
+    border: 1px solid red;
+    height: 30rem;
+    width: 98vw;
+    object-fit: cover;
+    object-position: center;
+   
+}
+
+
+.AnimeProfileImg{
+    position: absolute;
+    bottom: 1rem;
+    left: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px black;
+}
+
+.AnimeProfileImg_NULL{
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px black;
+}
+
+.AnimeTextContent{
+    border: 2px solid black;
+    padding: 2rem;
+    width: 100%;
+    font-size: 2rem;
+    
+}
+
+.AnimeName{
+   
+   
+}
+
+.AnimeRatingAndScore{
+    /* border: 1px solid red; */
+    font-size: 1rem;
+}
+
+.AnimeSynopsisContainer{
+    border: 1px solid green;
+    font-size: 1.22rem;
+    font-family: cursive;
+    width: 97%;
+    display: grid;
+    row-gap: 2rem;
+}
+
+.AnimeSynopsisContent{
+    /* border: 1px solid red; */
+    height: 5rem;
+    overflow: hidden;
+}
+
+.AnimeSynopsisContent_toggle{
+    height: fit-content;
+
+}
+
+.MoreSynopsis{
+    /* border: 1px solid black; */
+    background-color: white;
+}
+
+.MoreSynopsis:hover{
+    cursor: pointer;
+    color: white;
+    background-color: rgb(63, 62, 62);
+
+}
+

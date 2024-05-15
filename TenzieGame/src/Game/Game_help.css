@@ -1,0 +1,49 @@
+.gameHelp{
+    /* border: 1px solid black; */
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Mulish", sans-serif;
+}
+
+label{
+    text-decoration: underline;
+    font-size: 3rem;
+    /* border: 1px solid black; */
+    font-family: "Archivo Narrow", sans-serif;
+    
+}
+
+ul{
+    list-style-type:none;
+}
+
+
+
+.Rules_Wrapper{
+    border: 1px solid black;
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    gap: 20px;
+    
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255,255,255,0.2),
+                15px 15px 15px rgba(0,0,0,0.1);
+}
+
+
+
+.Powerups_wrapper{
+    border: 1px solid red;
+    font-size: 1.5rem;
+    display: grid;
+    gap: 20px;
+    place-items: center;
+    height: 14rem;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255,255,255,0.2),
+    15px 15px 15px rgba(0,0,0,0.1);
+    
+}

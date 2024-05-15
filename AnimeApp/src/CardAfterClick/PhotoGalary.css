@@ -1,0 +1,58 @@
+.container_anime{
+border: 1px solid black;
+position: relative;
+
+}
+.ToggleAnimePic{
+    position: absolute;
+    border: 1px solid black;
+    /* text-align: right; */
+    top: 0px;
+    right: 0px;
+    
+}
+
+.ToggleAnimePic:hover{
+    cursor: pointer;
+}
+
+.ToggleAnimePic:active{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+
+.PhotoGalaryContainer{
+    border: 3px solid red;
+    /* display: flex; */
+    /* flex-direction: column; */
+
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5,14rem);
+    gap: 1rem;
+    overflow: hidden;
+    max-height: 20rem;
+
+}
+
+.PhotoGalaryContainer_yes{
+    height: fit-content;
+    border: 3px solid red;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5,14rem);
+    gap: 1rem;
+    overflow: hidden;
+    
+}
+
+.animePicwrapper{
+    /* border: 1px solid black; */
+    display: flex;
+
+}
+
+.animePic{
+
+}

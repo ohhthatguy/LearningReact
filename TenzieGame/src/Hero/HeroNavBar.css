@@ -1,0 +1,47 @@
+.NavBar_container{
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 3rem;
+    font-family: "Archivo Narrow", sans-serif;
+    border-radius: 5px;
+    background-color: rgb(253,246,225);
+
+    
+}
+
+.logo{
+    margin-left: 2rem;
+    height: 3rem;
+    width: 3rem;
+
+}
+
+.navbar_options{
+    /* border: 2px solid red; */
+    display: flex;
+   
+    justify-content: space-around;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.Navbar_option{
+    /* border: 1px solid red; */
+    height: 2rem;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.Navbar_option:hover{
+    cursor: pointer;
+    border: 1px solid green;
+    transform: scale(1.02);
+}
+
+
+

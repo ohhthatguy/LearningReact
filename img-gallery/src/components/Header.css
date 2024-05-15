@@ -1,0 +1,66 @@
+.Header_container{
+
+    height: 10rem;
+    display: grid;
+    place-items: center;
+    row-gap: 0px;
+}
+
+.Hide_Header_con{
+    display: none;
+}
+
+.header_wrapper{
+    /* border: 1px solid black; */
+}
+
+.Header_container input{
+    height: 2rem;
+    width: 15rem;
+    border-radius: 5px;
+    font-size: 1.02rem;
+
+}
+
+.Header_container button{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 5px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.Header_container button:hover{
+    cursor: pointer;
+}
+
+.Header_container button:active{
+    transform: scale(1.02);
+}
+
+.hideSearchInfo{
+    display: none;
+    /* border: 1px solid black; */
+}
+
+.searchInfo{
+    display: block;
+    /* border: 1px solid black; */
+}
+
+.galary{
+    
+    transition: transform 0.5s;
+}
+
+.galary:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+
+}
+
+.galary:active{
+   
+    transform: scale(1.04);
+
+}

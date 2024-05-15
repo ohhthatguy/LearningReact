@@ -1,0 +1,22 @@
+.Creater{
+    
+    display: grid;
+    place-items: center;
+    font-family: "Jersey 10", sans-serif;
+    font-size: 1.1rem;
+    margin-top: 1.2rem;
+    background-color: rgb(253,246,225);
+
+}
+
+.CreaterName{
+    width: fit-content;
+    text-align: right;
+}
+
+.CreaterName:hover{
+    color: blueviolet;
+    cursor: pointer;
+}
+
+

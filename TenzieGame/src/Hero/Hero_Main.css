@@ -1,0 +1,59 @@
+.HeroMainContainer{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    
+
+    /* position: relative; */
+    background-color: rgb(253,246,225);
+
+}
+
+.Hero_img{
+    border: 3px solid blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/8;
+    
+    /* background-color: rgb(253,246,225); */
+}
+
+img{
+    /* height: 40rem; */
+    max-width: 100%;
+    /* width: 40rem; */
+}
+
+.Hero_Content{
+    /* position: absolute; */
+    /* border: 1px solid black; */
+    
+    background-color: rgb(253,246,225);
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+    justify-content:center;
+    font-family: "Praise", cursive;
+    grid-column: 8/12;
+    /* grid-row: 2; */
+   
+}
+
+p{
+    font-size: 300%;
+    border: 1px solid red;
+}
+
+
+.hero_btn{
+    height: 5rem;
+    width: 10rem;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    font-family: "Silkscreen", sans-serif;
+}
+
+.hero_btn:hover{
+    cursor: pointer;
+}

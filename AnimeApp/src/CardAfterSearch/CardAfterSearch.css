@@ -1,0 +1,25 @@
+.searchedDatacontainer{
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: repeat(5, 14rem);
+    gap: 1rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+    
+}
+
+.searchPicwrapper{
+    border: 1px solid green;
+    /* display: flex; */
+}
+
+.searchPic{
+    border: 1px solid black;
+   
+
+
+}
+
+.searchTitle{
+
+}

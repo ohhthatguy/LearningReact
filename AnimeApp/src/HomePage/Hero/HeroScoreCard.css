@@ -1,0 +1,10 @@
+.Hero_score{
+    /* border: 2px solid yellow; */
+    font-size: 1.5rem;
+    font-family: fantasy;
+    background-color: wheat;
+    max-width: fit-content;
+    /* box-shadow: 2px 1px 3px rgb(231, 215, 185); */
+    padding: 5px;
+    /* border-radius: 10px; */
+}

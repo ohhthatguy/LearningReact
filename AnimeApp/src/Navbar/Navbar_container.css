@@ -1,0 +1,74 @@
+:root{
+    --navbar: #006DD1;
+   --navbarIcon: #6DC2FF;
+    --logo: #EDFFF7;
+   
+}
+
+
+.Navbar_container{
+    /* border: 5px solid indianred; */
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 4rem;
+    background-color: var(--navbar);
+}
+
+.logo{
+    /* border: 1px solid red; */
+    margin: auto auto;
+    font-size: 300%;
+    color: var(--logo);
+
+}
+
+.Navbar_options_container{
+    /* list-style-type: none; */
+    /* border: 1px solid red; */
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    font-size: 150%;
+}
+
+.Navbar_options{
+    /* border: 1px solid black; */
+    color: var(--navbarIcon);
+    text-decoration: none;
+
+}
+
+.Navbar_options_container .Navbar_options:hover{
+    color: var(--logo);
+    cursor: pointer;
+}
+
+.Navbar_search_container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* border: 5px solid green; */
+}
+
+.Navbar_search{
+    /* border: 1px solid black; */
+    height: 50%;
+    width: 60%;
+    
+    border-radius: 25px;
+    padding-left: 12px;
+    padding-right: 29px;
+    font-size: 115%;
+
+
+}
+
+.Navbar_search_icon{
+    height: 35%;
+    /* border: 1px solid salmon; */
+    transform: translateX(-32px);
+}
