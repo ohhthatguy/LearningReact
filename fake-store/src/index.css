@@ -1,0 +1,168 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+.NavBar_Container{
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+ .NavBar_detail{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: fit-content;
+  gap: 2rem;
+  font-size: 1rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+
+
+}
+
+
+.NavBar_title_logo{
+  width: 0%;
+}
+
+.Navbar_product:hover{
+  cursor: pointer;
+}
+
+.Navbar_product_ul{
+  position: absolute;
+  top: 2.3rem;
+  display: none;
+  width: 100%;
+  
+}
+
+.Navbar_product:hover .Navbar_product_ul{
+  cursor: pointer;
+  display: grid;
+  border: 1px solid black;
+}
+
+.Navbar_product_li{
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+  height: 2rem;
+  padding: 5px;
+
+
+  
+}
+
+.Navbar_product_li:hover{
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+/* homepage (Hero section) */
+
+.Homepage_container{
+  border: 1px solid black;
+
+}
+
+.Herosection{
+  border: 1px solid black;
+  /* background-color: thistle; */
+  height: 80vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+  
+}
+
+.Herosection_details{
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: flex-start;
+  padding-left: 5rem;
+ 
+}
+
+.Herosection_details div:nth-child(2), .Herosection_details div:nth-child(3) {
+  font-size: 3rem;
+  font-weight: 640;
+}
+
+.Herosection_details button{
+  background-color: black;
+  color: white;
+  height: 3.5rem;
+  width: 12rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: ease-in-out color 0.5s ;
+}
+
+.Herosection_details button:hover{
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.637);
+}
+
+.Herosection_details button:active{
+  transform: scale(1.03);
+}
+
+.Herosection_img{
+  height: inherit;
+  width: 60%;
+  object-fit: cover;
+  border: 1px solid red;  
+}
+
+
+/* homepage (popular ) */
+
+.Popularsection_container{
+border: 1px solid black;
+}
+
+.Popularsection_title{
+  text-align: center;
+}
+
+.Popularsection_title div:nth-child(1){
+  /* border: 1px solid red; */
+}
+
+.Popularsection_title div:nth-child(2){
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.Popularsection_showcards{
+  /* border: 1px solid red; */
+  display: flex;
+ 
+}
+
+/* card */
+
