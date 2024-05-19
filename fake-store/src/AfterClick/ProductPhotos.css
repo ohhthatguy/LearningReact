@@ -1,0 +1,17 @@
+.productphotos_container{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.product_photo{
+    /* border: 1px solid red; */
+    
+    height: 90vh;
+    width: 100%;
+    object-fit: contain;
+
+}

@@ -5,16 +5,15 @@
     gap: 0.5rem;
     padding: 0.5rem;
     transition: ease 0.5s transform;
-    text-decoration: none;
+    
   }
   
   .Cards_container img{
-    height: 25rem;
     border: 1px solid rgba(0, 0, 0, 0.384);;
-    width: 100%;
-    object-fit: cover;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.384);
-    
+    height: 50vh;
+    width: 20vw;
+    object-fit: contain;
   }
   
   .Cards_details{

@@ -34,6 +34,9 @@ export const GlobalProvider = ({children}) =>{
         const data = await res.json() 
         dispatch({type:'SHOW_ALL_PRODUCT', payload:data})
     }
+
+    
+    
     
     useEffect(()=>{
         fetchAllProduct()
@@ -41,8 +44,8 @@ export const GlobalProvider = ({children}) =>{
     },[])
 
 
-    console.log(state)
-    console.log(category)
+    // console.log(state)
+    // console.log(category)
 
     
     return (<GlobalContext.Provider value={{state, category}}>

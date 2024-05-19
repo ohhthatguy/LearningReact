@@ -13,8 +13,8 @@ const Counter = () => {
 
         <div className='counter'>
             <button onClick={()=> count>0 && setCount(prev=>prev-1) } >-</button>
-            <span>{count}</span>
-            <button  onClick={()=> count<20 && setCount(prev=>prev+1) }>+</button>
+            <div>{count}</div>
+            <button onClick={()=> count<20 && setCount(prev=>prev+1) }>+</button>
         </div>
 
         <button onClick={handleAddToCart}>ADD TO CART</button>

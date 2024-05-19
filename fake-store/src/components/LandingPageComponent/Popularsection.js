@@ -8,7 +8,7 @@ import Card from '../Card'
 const Popularsection = () => {
 
     const {state} = useContext(GlobalContext)
-    const stop =4;
+    // const stop =4;
     // console.log(Object.values(state))
 
   return (
@@ -28,7 +28,7 @@ const Popularsection = () => {
                     return  <Card product={value}/>
                 }
 
-                // return  <Card product={value}/>
+               
                 
 
             })

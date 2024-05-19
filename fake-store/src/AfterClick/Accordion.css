@@ -1,0 +1,59 @@
+.Accordion{
+    border-top: 1px solid black;
+
+}
+
+.Accordion_description_container{
+/* border-top: 1px solid black; */
+}
+
+
+
+.Accordion_description_container_title{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    /* border: 2px dotted blue; */
+    font-size: 1.35rem;
+    padding: 0.5rem;
+    font-weight: 600;
+
+}
+
+.Accordion_description_wrapper{
+  
+    /* border: 1px dotted blue; */
+    display: grid;
+    grid-template-rows: 0fr;
+    transition:  ease 0.5s all;
+    /* padding: 0.5rem 0rem 0.5rem 0rem; */
+
+}
+
+.Accordion_description_wrapper_onClick{
+    display: grid;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    /* border: 1px dotted yellow; */
+
+    grid-template-rows: 1fr;
+    transition:  ease 0.5s grid-template-rows;
+    border-bottom: 1px solid black;
+
+   
+
+
+}
+
+.Accordion_description_wrapper_onClick >div{
+    overflow: hidden;
+}
+
+.Accordion_description_wrapper >div{
+    overflow: hidden;
+}
+
+/* .Accordion_description_container:hover .Accordion_description_wrapper{
+    
+    grid-template-rows: 1fr;
+    
+} */

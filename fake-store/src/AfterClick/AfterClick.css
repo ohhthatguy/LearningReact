@@ -1,46 +1,101 @@
 .AfterClick_container{
     /* border: 5px solid red; */
+    margin: 1rem;
+    display: grid;
+    row-gap: 1rem;
 }
 
 .AfterClick_content{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 91vh;
+    column-gap: 1rem;
 
 }
 
 .AfterClick_content1{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 
 .AfterClick_content2{
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    
 
+
+}
+
+.AfterClick_content2_details_wrapper{
+  display: grid;
+  gap: 1.2rem;
 }
 
 .AfterClick_content2_details{
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+    padding: 0rem 1.5rem 1rem 1.5rem;
+    position: relative;
+    
+    
 
 }
 
-.AfterClick_content2_details div:nth-child(1){
+.AfterClick_content2_details_buttons{
+  /* border: 1px solid black; */
+  position: absolute;
+  top: 0%;
+  left: 88%;
+  display: flex;
+  gap: 10px;
+}
+
+.AfterClick_content2_details_buttons > button{
+  height: 1.8rem;
+  background-color: transparent;
+  padding: 3px;
+  /* border-color: transparent; */
+}
+
+
+/* category */
+.AfterClick_content2_details div:nth-child(1){ 
     color: rgba(0, 0, 0, 0.479);
-    font-weight: 500;
+    font-weight: 100;
+    text-transform: uppercase;
   }
 
+  /* title */
   .AfterClick_content2_details div:nth-child(2){
     font-family: 'Arial Narrow', Arial, sans-serif;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 1.45rem;
+    margin-top: 0.6rem;
   }
 
+  /* price */
   .AfterClick_content2_details div:nth-child(3){
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+
   }
 
+  /* //freeshipping */
   .AfterClick_content2_details div:nth-child(3) span{
     color: rgba(0, 0, 0, 0.479);
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 0.9rem;
     font-weight: 100;
+  }
+
+  /* details */
+  .AfterClick_content2_details div:nth-child(4){
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  */
+    color: rgba(0, 0, 0, 0.479);
+    margin-top: 0.4rem;
+  }
+
+  .AfterClick_content_related_product{
+    /* border: 1px solid black; */
+    padding: 1rem;
   }

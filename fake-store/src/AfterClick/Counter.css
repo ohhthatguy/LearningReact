@@ -1,8 +1,45 @@
 .counter_container{
     display: flex;
-    
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+
+    gap:2rem;
+    padding: 1rem;
 }
 
 .counter{
+    display: flex;
+}
+
+.counter button, .counter_container button{
+    transition: ease 0.5s background-color;
+}
+
+.counter button:hover, .counter_container button:hover {
+    cursor: pointer;
+    background-color: rgba(167, 156, 156, 0.589);
 
 }
+
+.counter button:active, .counter_container button:active{
+    transform: scale(1.03);
+    
+}
+
+.counter button, .counter div{
+    border: 1px solid black;
+    width: 4rem;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: whitesmoke;
+}
+
+.counter div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+}
+
+

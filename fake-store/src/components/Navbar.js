@@ -5,19 +5,20 @@ import { GlobalContext } from '../context/Global'
 const Navbar = () => {
 
     const {category} = useContext(GlobalContext)
-    console.log(category)
+    // console.log(category)
 
   return (
     <div className='NavBar_Container'>
 
 <div className='NavBar_detail'>
-            <div>Home</div>
+            {/* <div>Home</div> */}
+            <Link className='home' to='/'>Home</Link>
 
             <div className='Navbar_product'>Product
                 <ul className='Navbar_product_ul'>
                     {
-                    Object.values(category).map((e)=>(
-                        <Link className='Navbar_product_li' to={`/product/${e}`}>{e}</Link>
+                    Object.values(category).map((e,index)=>(
+                        <Link key={index} className='Navbar_product_li' to={`/product/${e}`}>{e}</Link>
                     ))
                     }
                 </ul>
