@@ -1,25 +1,16 @@
-import React,{useContext, useEffect, useState} from 'react'
-import { Link } from 'react-router-dom'
-import { GlobalContext } from '../../context/Global'
+import React from 'react'
 import HeroPage from './HeroPage'
 import Popularsection from './Popularsection'
 
 const Homepage = () => {
-
-    // const {state} = useContext(GlobalContext)
   
-  return (
-    
+  return (    
     <div >
 
       <HeroPage />
       <Popularsection />
 
-
-
     </div>
-
-
   )
 }
 

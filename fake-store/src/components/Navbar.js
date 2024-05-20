@@ -1,6 +1,8 @@
 import React,{useContext} from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../context/Global'
+import { MdAddShoppingCart } from "react-icons/md";
+import { GoDotFill } from "react-icons/go";
 
 const Navbar = () => {
 
@@ -34,7 +36,10 @@ const Navbar = () => {
         </div>
 
         <div className='NavBar_category'>
-         
+         <MdAddShoppingCart className='cart'/>
+            <div className='dot'>
+                1
+            </div>
         </div>
        
 

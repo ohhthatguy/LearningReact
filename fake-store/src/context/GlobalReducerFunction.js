@@ -25,3 +25,14 @@ export const reducerCategory = (category,action)=>{
             return category
     }
 }
+
+export const reducerCart = (cart,action)=>{
+    switch(action.type){
+
+        case 'SAVE_CHECKOUT_DATA':
+            return {...cart, ...action.payload} //cart
+
+        default:
+            return cart
+    }
+}

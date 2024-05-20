@@ -1,8 +1,9 @@
 import React from 'react'
+import IndividualCategory from '../IndividualCategory'
 
 const Mens_clothing = () => {
   return (
-    <div>Mens_clothing</div>
+    <IndividualCategory category={"men's clothing"} />
   )
 }
 

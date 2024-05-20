@@ -1,6 +1,5 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../../context/Global'
-import { Link } from 'react-router-dom'
 import Card from '../Card'
 
 
@@ -8,8 +7,7 @@ import Card from '../Card'
 const Popularsection = () => {
 
     const {state} = useContext(GlobalContext)
-    // const stop =4;
-    // console.log(Object.values(state))
+
 
   return (
     <div className='Popularsection_container'>
@@ -27,9 +25,6 @@ const Popularsection = () => {
                 if(index < 4){
                     return  <Card product={value}/>
                 }
-
-               
-                
 
             })
         }

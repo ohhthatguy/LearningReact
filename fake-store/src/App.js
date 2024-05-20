@@ -8,6 +8,8 @@ import Jewelery from './components/Jewelery_section/Jewelery'
 import Mens_clothing from './components/mens_clothing_section/Mens_clothing'
 import Womens_clothing from './components/womens_clothing_section/Womens_clothing'
 import AfterClick from './AfterClick/AfterClick'
+import Footer from './components/Footer'
+import ProductPhotosClicked from './AfterClick/ProductPhotosClicked'
 
 
 
@@ -24,11 +26,12 @@ const App = () => {
       <Route path='/product/jewelery' element={<Jewelery />} />
       <Route path="/product/men's clothing" element={<Mens_clothing />} />
       <Route path="/product/women's clothing" element={<Womens_clothing />} />
+      <Route path="/image/product/:category/:id" element={<ProductPhotosClicked />} />
 
 
     </Routes>
 
-    
+    <Footer />
    
     
 

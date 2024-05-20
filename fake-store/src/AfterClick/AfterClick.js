@@ -1,4 +1,4 @@
-import React,{useContext, useState, useEffect} from 'react'
+import React,{useContext, useState, useEffect, useRef} from 'react'
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../context/Global'
 import Counter from './Counter'
@@ -9,21 +9,19 @@ import RelatedProduct from './RelatedProduct'
 
 const AfterClick = () => {
     
-    console.log("we in after clicked")
+    const topElement = useRef()
+
     const {state} = useContext(GlobalContext)
     const {id} = useParams()
     
     const [updatedID, setUpdatedID] = useState(parseInt(id))
     useEffect(()=>{
+        window.scrollTo({top: topElement.current.offsetTop, behavior: "smooth" })
         setUpdatedID(parseInt(id))
     },[id])
-    // const [updatedID, setUpdatedID] = useState(parseInt(id))
+  
 
-
-    console.log(`id from param: ${id}}`)
-    console.log(`updatedID: ${updatedID}`)
-
-  return (<div className='AfterClick_container'>
+  return (<div ref={topElement} className='AfterClick_container'>
 
             <div className='AfterClick_content'>
 

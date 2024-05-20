@@ -1,0 +1,15 @@
+.productphotoclicked_container{
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+.productphotoclicked_container img{
+    /* border: 1px solid red; */
+    height: 90vh;
+    width: 80vw;
+    object-fit: contain;
+    box-shadow: 1px 2px 3px black;
+}

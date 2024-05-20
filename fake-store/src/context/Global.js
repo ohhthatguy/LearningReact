@@ -1,6 +1,7 @@
 import { createContext, useEffect, useReducer, useState } from "react";
 import { reducer } from "./GlobalReducerFunction";
 import {reducerCategory} from "./GlobalReducerFunction"
+import { reducerCart } from "./GlobalReducerFunction";
 
 //creating context
 export const GlobalContext = createContext();
@@ -14,6 +15,8 @@ export const GlobalProvider = ({children}) =>{
  
     const [state, dispatch] = useReducer(reducer, [])
     const [category, categoryDispatch] = useReducer(reducerCategory, [])
+    const [cart, cartDispatch] = useReducer(reducerCart, [{}])
+
    
     
 
@@ -35,20 +38,27 @@ export const GlobalProvider = ({children}) =>{
         dispatch({type:'SHOW_ALL_PRODUCT', payload:data})
     }
 
+    const CheckoutData = (productId,quantity, price)=>{
+
+        cartDispatch({type: 'SAVE_CHECKOUT_DATA', payload: {
+            productId: productId,
+            quantity: quantity,
+            price: price
+        }})
+        
+    }
+
     
     
     
     useEffect(()=>{
         fetchAllProduct()
         fetchAllCategory()
+        // fetchCart()
     },[])
 
-
-    // console.log(state)
-    // console.log(category)
-
-    
-    return (<GlobalContext.Provider value={{state, category}}>
+    console.log(cart)
+    return (<GlobalContext.Provider value={{state, category, CheckoutData}}>
 
         {children}
 
