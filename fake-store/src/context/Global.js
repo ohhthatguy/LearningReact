@@ -15,12 +15,9 @@ export const GlobalProvider = ({children}) =>{
  
     const [state, dispatch] = useReducer(reducer, [])
     const [category, categoryDispatch] = useReducer(reducerCategory, [])
-    const [cart, cartDispatch] = useReducer(reducerCart, [{}])
+    const [cart, cartDispatch] = useReducer(reducerCart, [])
+    const [cartCounter, setCartCounter] = useState(0);
 
-   
-    
-
-  
 
     //fetch all category
     const fetchAllCategory = async()=>{
@@ -38,6 +35,7 @@ export const GlobalProvider = ({children}) =>{
         dispatch({type:'SHOW_ALL_PRODUCT', payload:data})
     }
 
+    //get product sent to cart by user
     const CheckoutData = (productId,quantity, price)=>{
 
         cartDispatch({type: 'SAVE_CHECKOUT_DATA', payload: {
@@ -49,16 +47,27 @@ export const GlobalProvider = ({children}) =>{
     }
 
     
+    //delete product sent to cart by user
+    const deletCheckoutData = (productId,quantity, price)=>{
+
+        cartDispatch({type: 'DELETE_CHECKOUT_DATA', payload: {
+            productId: productId,
+            quantity: quantity,
+            price: price
+        }})
+        
+    }
+    
     
     
     useEffect(()=>{
         fetchAllProduct()
         fetchAllCategory()
-        // fetchCart()
+        
     },[])
 
-    console.log(cart)
-    return (<GlobalContext.Provider value={{state, category, CheckoutData}}>
+    
+    return (<GlobalContext.Provider value={{state, category, CheckoutData, cart, cartCounter, deletCheckoutData, setCartCounter}}>
 
         {children}
 

@@ -1,6 +1,7 @@
-import React,{useContext, useState, useEffect, useRef} from 'react'
+import React,{useContext, useEffect, useRef} from 'react'
 import { useParams } from 'react-router-dom'
 import { GlobalContext } from '../context/Global'
+import { Link } from 'react-router-dom'
 import Counter from './Counter'
 import './AfterClick.css'
 import Accordion from './Accordion'
@@ -12,14 +13,15 @@ const AfterClick = () => {
     const topElement = useRef()
 
     const {state} = useContext(GlobalContext)
-    const {id} = useParams()
+    let {id} = useParams()
+    id = parseInt(id)
     
-    const [updatedID, setUpdatedID] = useState(parseInt(id))
     useEffect(()=>{
         window.scrollTo({top: topElement.current.offsetTop, behavior: "smooth" })
-        setUpdatedID(parseInt(id))
+      
     },[id])
   
+        // console.log(id)
 
   return (<div ref={topElement} className='AfterClick_container'>
 
@@ -30,9 +32,9 @@ const AfterClick = () => {
                     {
                         Object.values(state).map((e)=>(
                             
-                            (e.id == updatedID)
+                            (e.id == id)
                                 &&
-                            <ProductPhotos id={updatedID} productDetail={e}/>
+                            <ProductPhotos id={id} productDetail={e}/>
 
                         ))
                     }
@@ -43,15 +45,21 @@ const AfterClick = () => {
                     {
                         Object.values(state).map((e)=>(
 
-                            (e.id==updatedID) 
+                            (e.id==id) 
                                 &&
                             <div className='AfterClick_content2_details_wrapper'>
 
                                 <div className='AfterClick_content2_details'>
                                     <div className='AfterClick_content2_details_buttons'>
-                                        <button disabled={(updatedID <=1 ? true : false)} onClick={()=> (setUpdatedID(data=> data-1) )}>prev</button>
-                                        <button disabled={(updatedID >19 ? true : false)} onClick={()=> ( setUpdatedID(data=> data+1))}>next</button>
 
+                                    <Link to={`/product/${id-1}`}>
+                                    <button disabled={(id <=1 ? true : false)}>prev</button>
+                                    </Link>
+
+                                    <Link to={`/product/${id+1}`}>
+                                    <button disabled={(id >19 ? true : false)}>next</button>
+                                    </Link>
+                                      
                                     </div>
                                     <div>{e.category}</div>
                                     <div>{e.title}</div>
@@ -59,7 +67,7 @@ const AfterClick = () => {
                                     <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus interdum eros. In blandit velit a lacus laoreet dictum. Maecenas vel vulputate nulla. Ut nec enim vel tortor aliquet varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dapibus interdum eros. In blandit velit a lacus laoreet dictum. Maecenas vel vulputate nulla. Ut nec enim vel tortor aliquet varius.</div>
                                 </div>
 
-                                <Counter />
+                                <Counter id={id}/>
 
                                 <Accordion />
 
@@ -72,8 +80,7 @@ const AfterClick = () => {
 
             <div className='AfterClick_content_related_product'>
                 
-
-                <RelatedProduct state={state} id={updatedID-1}/>
+                <RelatedProduct state={state} id={id}/>
 
             </div>
 

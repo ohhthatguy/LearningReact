@@ -7,7 +7,7 @@ const HeroPage = () => {
     const {state} = useContext(GlobalContext)
   
     let randomNum = Math.floor(Math.random()* Object.keys(state).length)
-    console.log(randomNum)
+  
   return (
     <div>
         {

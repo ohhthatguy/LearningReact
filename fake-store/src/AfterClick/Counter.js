@@ -1,16 +1,18 @@
 import React,{useState, useContext} from 'react'
 import { GlobalContext } from '../context/Global';
-import { useParams } from 'react-router-dom';
+
 import './Counter.css'
 
-const Counter = () => {
-    const {CheckoutData,state} = useContext(GlobalContext) 
+const Counter = ({id}) => {
+    const {CheckoutData,state,setCartCounter} = useContext(GlobalContext) 
     const [count, setCount] = useState(0);
-    const {id} = useParams()
-    
+  
+    console.log(id)
 
     function handleAddToCart(){
-      CheckoutData(id,count,state[id-1].price)
+      
+      CheckoutData(id,count,state[id].price)
+      setCartCounter(count)
 
     }
 

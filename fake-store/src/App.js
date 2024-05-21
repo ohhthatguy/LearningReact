@@ -10,6 +10,7 @@ import Womens_clothing from './components/womens_clothing_section/Womens_clothin
 import AfterClick from './AfterClick/AfterClick'
 import Footer from './components/Footer'
 import ProductPhotosClicked from './AfterClick/ProductPhotosClicked'
+import Checkout from './components/Checkout/Checkout'
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
       <Route path="/product/men's clothing" element={<Mens_clothing />} />
       <Route path="/product/women's clothing" element={<Womens_clothing />} />
       <Route path="/image/product/:category/:id" element={<ProductPhotosClicked />} />
+      <Route path='/checkout' element={<Checkout />} />
 
 
     </Routes>

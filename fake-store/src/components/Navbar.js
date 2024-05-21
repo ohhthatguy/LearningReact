@@ -1,13 +1,21 @@
-import React,{useContext} from 'react'
+import React,{useContext, useRef} from 'react'
 import { Link } from 'react-router-dom'
 import { GlobalContext } from '../context/Global'
 import { MdAddShoppingCart } from "react-icons/md";
-import { GoDotFill } from "react-icons/go";
+
 
 const Navbar = () => {
 
-    const {category} = useContext(GlobalContext)
-    // console.log(category)
+    const {category, cartCounter} = useContext(GlobalContext)
+
+    const cartEle = useRef()
+
+    function handleClick(){
+       cartEle.current.className = 'hideDot'
+    }
+
+    (cartCounter > 0  && (cartEle.current.className = 'dot'))
+    
 
   return (
     <div className='NavBar_Container'>
@@ -36,10 +44,15 @@ const Navbar = () => {
         </div>
 
         <div className='NavBar_category'>
-         <MdAddShoppingCart className='cart'/>
-            <div className='dot'>
-                1
+        
+        <Link to='/checkout'>
+             <MdAddShoppingCart onClick={handleClick} className='cart'/>
+        </Link>
+        
+            <div ref={cartEle} className='hideDot' >
+                {cartCounter}
             </div>
+
         </div>
        
 

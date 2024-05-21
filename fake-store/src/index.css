@@ -94,7 +94,7 @@ body {
 .cart{
   height: 2rem;
   width: 100%;
-
+  color: black;
 }
 
 .dot{
@@ -108,6 +108,10 @@ background-color: red;
 color: white;
 font-family: monospace;
 
+}
+
+.hideDot{
+  display: none;
 }
 
 /* homepage (Hero section) */

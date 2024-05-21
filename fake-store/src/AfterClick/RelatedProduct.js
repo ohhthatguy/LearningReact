@@ -3,7 +3,6 @@ import Card from '../components/Card'
 
 const RelatedProduct = ({state,id}) => {
     let count=0;
-    // console.log(state[id].category)
 
   return (
     <div className='Popularsection_container'>

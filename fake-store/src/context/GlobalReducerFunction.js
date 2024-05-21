@@ -30,7 +30,18 @@ export const reducerCart = (cart,action)=>{
     switch(action.type){
 
         case 'SAVE_CHECKOUT_DATA':
-            return {...cart, ...action.payload} //cart
+            return [...cart, action.payload] //cart
+
+        case 'DELETE_CHECKOUT_DATA':
+     
+            console.log(action.payload)
+           return  cart.filter((e)=> ((e.quantity !== action.payload.quantity) || (e.productId !== action.payload.productId) || (e.price !== action.payload.price)))
+
+        //    return  Object.values(cart).filter((e)=> ((e.quantity !== action.payload.quantity) || (e.productId !== action.payload.productId) || (e.price !== action.payload.price)))
+            
+
+            
+
 
         default:
             return cart
